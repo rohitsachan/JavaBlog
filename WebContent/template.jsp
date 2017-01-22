@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Spring 3.0</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="mycss.css" rel="stylesheet">
+
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img height="35px" src="https://spring.io/img/spring-by-pivotal.png" /></a>
+    </div>
+    <ul id="myTopnav" class="nav navbar-nav topnav">
+      <li class="active"><a href="index.jsp">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Q&amp;A
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">IOC</a></li>
+          <li><a href="#">AOP</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programs
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">IOC</a></li>
+          <li><a href="#">AOP</a></li>
+          <li><a href="#">Security</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="forum.html">Forum</a></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="myjs.js"></script>
+</body></html>
