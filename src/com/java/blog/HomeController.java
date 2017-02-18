@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Hello
  */
-//@WebServlet("/home")
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -24,7 +23,7 @@ public class HomeController extends HttpServlet {
 	Statement st = null;
 	ResultSet re = null;
 	
-	String Qid,Qno,Que,Ans;
+	String Qid,Qno,Que,ansid,Ans,Source;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -54,16 +53,20 @@ public class HomeController extends HttpServlet {
 				Qid = re.getString(2);
 				Qno = re.getString(3);
 				Que = re.getString(5);
-				Ans = re.getString(6);
+				ansid = re.getString(6);
+				Ans = re.getString(7);
+				Source = re.getString(8);
 				
 				bean.setQid(Qid);
 				bean.setQno(Qno);
 				bean.setQue(Que);
+				bean.setAnsid(ansid);
 				bean.setAns(Ans);
+				bean.setSource(Source);
 				
 				items.add(bean);
 				
-				System.out.println(Qid+"\t"+Qno+"\t"+Que+"\t"+Ans);
+				System.out.println(Qid+"\t"+Qno+"\t"+Que+"\t"+Ans+"\t"+Source);
 			}
 			
 		} catch (SQLException e) {

@@ -1,17 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Spring 3.0</title>
+<title>Admin Control Panel</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="mycss.css" rel="stylesheet">
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<style type="text/css">
-	
-</style>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -53,7 +49,15 @@
 </nav>
 
 
+
+
+<!-- <h2><a href="submitQA.jsp">Submit a Question</a> </h2> -->
+
+
+
 <div class="container dynamicTile">
+<h1>Welcome <i>${username} </i></h1>
+<h2></h2>
 <div class="row">
 
   <a href="submitQA.jsp">
@@ -274,16 +278,10 @@
 
 
 
-<div  align="center">
-<h1 style="margin-top:100px">Hello</h1>
-<p>This is gonna be fabulous....</p>
-<h2>Stay Tuned....</h2>
-<div align='center' class='error'>(>_<)</div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="tiles.js"></script>
 </body>
 </html>

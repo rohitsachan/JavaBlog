@@ -6,13 +6,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spring 3.0</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="mycss.css" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
+
 
 <style type="text/css">
 	
 </style>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" >
@@ -46,7 +53,7 @@
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
     </ul>
@@ -56,25 +63,29 @@
 
 <div id="space" class="container-fluid">
 <!-- ---------------------------------------------------- -->
-<%! int i = 1;String Ques="Ques"; %> 	<!-- not used -->
 
 <c:forEach items="${items}" var="item">
 	<div id="${item.qid}"><h4><b>${item.qno}  :  ${item.que}</b></h4></div>
-	<div class="ans"><h4>Ans : </h4>${item.ans}<br/></div>
-	<% i=i+1; %> <!-- not used -->
-</c:forEach>  
+	<div id="${item.ansid}" class="ans"><h4>Ans : </h4>${item.ans}<br/></div>
+		<a class="btn btn-success" href="#${item.ansid}" rel="modal:open" title="Content Demo">Answer</a>
+</c:forEach>
 
 <br><br><br><br><br>
-<%-- <div id="Ques1"><h4><b>${Qno} : ${Que}</b></h4></div>
-<div class="ans"><h4>Ans : </h4><b>${Ans}</b><br/></div>
-
-<div id="QuesN"><b>Ques n</b></div>
-<div class="ans"><b>Ans n: </b><br/></div> --%>
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="jquery.popdown.js"></script>
 <script src="myjs.js"></script>
+<script type="text/javascript">
+	$(".showB").click(function(){
+		//$('a[data-modal]').click(function(event) {
+			$(this).modal();
+			return false;
+		//});
+	});
+</script>
 </body>
 </html>
